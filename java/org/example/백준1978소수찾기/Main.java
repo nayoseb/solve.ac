@@ -1,4 +1,4 @@
-package org.example.백준1978소수찾기;
+package 백준1978소수찾기;
 
 import java.util.Scanner;
 

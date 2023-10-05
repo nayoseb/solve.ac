@@ -1,4 +1,4 @@
-package org.example.백준1546평균;
+package 백준1546평균;
 
 import java.util.Arrays;
 import java.util.Scanner;
