@@ -31,10 +31,9 @@ public class Main {
         arr = Arrays.stream(arr).distinct().toArray(String[]::new);
         StringBuilder sb = new StringBuilder();
 
-        sb.append(arr[0]).append('\n');
 
 
-        for (int i = 1; i < arr.length; i++) {
+        for (int i = 0; i < arr.length; i++) {
             sb.append(arr[i]).append('\n');
         }
         System.out.println(sb);
