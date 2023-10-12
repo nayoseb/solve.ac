@@ -1,4 +1,4 @@
-package 백준2751수정렬하기;
+package class2.백준2751수정렬하기;
 
 import java.io.BufferedReader;
 import java.io.IOException;
