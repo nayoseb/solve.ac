@@ -1,91 +1,51 @@
-package 백준1018체스판다시칠하기;
+package class2.백준1018체스판다시칠하기;
 
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
-import java.io.IOException;
 
 public class Main {
-
-    public static boolean[][] arr;
-    public static int min = 64;
-
     public static void main(String[] args) throws IOException {
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        StringTokenizer stringTokenizer = new StringTokenizer(bufferedReader.readLine(), " ");
 
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int N = Integer.parseInt(stringTokenizer.nextToken());
+        int M = Integer.parseInt(stringTokenizer.nextToken());
 
-        StringTokenizer st = new StringTokenizer(br.readLine(), " ");
+        char[][] arr = new char[N][M];
 
-        int N = Integer.parseInt(st.nextToken());
-        int M = Integer.parseInt(st.nextToken());
-
-        arr = new boolean[N][M];
-
-
-        // 배열 입력
         for (int i = 0; i < N; i++) {
-            String str = br.readLine();
-
+            String line = bufferedReader.readLine();
             for (int j = 0; j < M; j++) {
-                if (str.charAt(j) == 'W') {
-                    arr[i][j] = true;		// W일 때는 true
-                } else {
-                    arr[i][j] = false;		// B일 때는 false
+                arr[i][j] = line.charAt(j);
+            }
+        }
+
+        int result = Integer.MAX_VALUE;
+
+        for (int i = 0; i < N - 7; i++) {
+            for (int j = 0; j < M - 7; j++) {
+                int countW = 0; // 'W'로 시작하는 체스판을 기준으로 칠해야 하는 횟수
+                int countB = 0; // 'B'로 시작하는 체스판을 기준으로 칠해야 하는 횟수
+
+                for (int k = i; k < i + 8; k++) {
+                    for (int l = j; l < j + 8; l++) {
+
+                        //k행l열
+                        if ((k + l) % 2 == 0) {
+                            if (arr[k][l] != 'W') countW++;
+                            if (arr[k][l] != 'B') countB++;
+                        } else {
+                            if (arr[k][l] != 'B') countW++;
+                            if (arr[k][l] != 'W') countB++;
+                        }
+                    }
                 }
-
+                result = Math.min(result, Math.min(countW, countB));
             }
         }
 
-
-        int N_row = N - 7;
-        int M_col = M - 7;
-
-        for (int i = 0; i < N_row; i++) {
-            for (int j = 0; j < M_col; j++) {
-                find(i, j);
-            }
-        }
-        System.out.println(min);
-    }
-
-
-    public static void find(int x, int y) {
-        int end_x = x + 8;
-        int end_y = y + 8;
-        int count = 0;
-
-        boolean isWhite = arr[x][y];	// 첫 번째 칸의 색
-
-        for (int i = x; i < end_x; i++) {
-            for (int j = y; j < end_y; j++) {
-
-                // 올바른 색이 아닐경우 count 1 증가
-                if (arr[i][j] != isWhite) {
-                    count++;
-                }
-
-                /*
-                 * 다음 칸은 색이 바뀌므로
-                 * true라면 false로, false 라면 true 로
-                 * 값을 변경한다.
-                 */
-                isWhite = (!isWhite);
-            }
-
-            isWhite = !isWhite;
-        }
-
-        /*
-         *  첫 번째 칸을 기준으로 할 때의 색칠 할 개수(count)와
-         *  첫 번째 칸의 색의 반대되는 색을 기준으로 할 때의
-         *  색칠 할 개수(64 - count) 중 최솟값을 count 에 저장
-         */
-        count = Math.min(count, 64 - count);
-
-        /*
-         * 이전까지의 경우 중 최솟값보다 현재 count 값이
-         * 더 작을 경우 최솟값을 갱신
-         */
-        min = Math.min(min, count);
+        System.out.println(result);
     }
 }
