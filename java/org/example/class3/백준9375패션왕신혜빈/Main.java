@@ -20,13 +20,13 @@ public class Main {
             HashMap<String, Integer> hashMap = new HashMap<>();
 
             for (int j = 0; j < n; j++) {
-                StringTokenizer stringTokenizer = new StringTokenizer(bufferedReader.readLine() ," ");
+                StringTokenizer stringTokenizer = new StringTokenizer(bufferedReader.readLine(), " ");
 
                 String 의상이름 = stringTokenizer.nextToken();
                 String 의상종류 = stringTokenizer.nextToken();
 
                 if (hashMap.containsKey(의상종류)) {
-                    hashMap.put(의상종류, hashMap.get(의상종류)+1);
+                    hashMap.put(의상종류, hashMap.get(의상종류) + 1);
                 } else
                     hashMap.put(의상종류, 1);
 
@@ -37,7 +37,7 @@ public class Main {
                 result *= (val + 1);
             }
             //알몸인 상태 제외
-            stringBuilder.append(result-1+"\n");
+            stringBuilder.append(result - 1 + "\n");
         }
         System.out.println(stringBuilder);
     }

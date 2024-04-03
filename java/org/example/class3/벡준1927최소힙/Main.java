@@ -1,4 +1,4 @@
-package class3.벡즌1927최소힙;
+package class3.벡준1927최소힙;
 
 import java.io.BufferedReader;
 import java.io.IOException;

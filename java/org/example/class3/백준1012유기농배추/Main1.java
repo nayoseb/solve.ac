@@ -56,7 +56,7 @@ public class Main1 {
 
     static void bfs(int x, int y) {
         Queue<int[]> qu = new LinkedList<int[]>();
-        qu.add(new int[] {x, y});
+        qu.add(new int[]{x, y});
 
         while (!qu.isEmpty()) {
             x = qu.peek()[0];
@@ -69,7 +69,7 @@ public class Main1 {
 
                 if (cx >= 0 && cy >= 0 && cx < M && cy < N) {
                     if (!visit[cx][cy] && cabbage[cx][cy] == 1) {
-                        qu.add(new int[] {cx, cy});
+                        qu.add(new int[]{cx, cy});
                         visit[cx][cy] = true;
                     }
                 }

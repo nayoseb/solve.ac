@@ -14,7 +14,7 @@ public class Main {
 
 
         for (int i = 1; i <= N; i++) {
-            arr[i] =in.nextInt();
+            arr[i] = in.nextInt();
         }
 
         // index = 0 은 시작점이므로 0이다.
@@ -26,7 +26,7 @@ public class Main {
         }
 
         for (int i = 3; i <= N; i++) {
-            DP[i] = Math.max(DP[i - 2] , DP[i - 3] + arr[i - 1]) + arr[i];
+            DP[i] = Math.max(DP[i - 2], DP[i - 3] + arr[i - 1]) + arr[i];
         }
 
         System.out.println(DP[N]);

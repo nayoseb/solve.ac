@@ -9,7 +9,7 @@ public class Main {
         int A = scanner.nextInt();
         int B = scanner.nextInt();
 
-        if (A>B) {
+        if (A > B) {
             System.out.println(">");
         } else if (A < B) {
             System.out.println("<");

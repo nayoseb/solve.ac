@@ -6,13 +6,13 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int N = scanner.nextInt();
-        int count =  0;
+        int count = 0;
 
 
-        while (count!=N) {
+        while (count != N) {
 
             StringBuilder stringBuilder = new StringBuilder();
-            for (int i = count; i < N-1 ; i++) {
+            for (int i = count; i < N - 1; i++) {
                 stringBuilder.append(" ");
             }
 

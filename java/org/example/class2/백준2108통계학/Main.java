@@ -10,7 +10,7 @@ public class Main {
 
         // 입력 받을 숫자의 개수 N
         int N = Integer.parseInt(br.readLine());
-        int num[] = new int[N];
+        int[] num = new int[N];
 
         // 입력 받은 숫자들을 num 배열에 저장
         for (int i = 0; i < N; i++) {
@@ -25,7 +25,7 @@ public class Main {
         System.out.println(Math.round(sum / (float) N));
 
         // CountingSort를 이용해서 정렬을 하는 부분
-        int count[] = new int[8001];  // -4000 ~ 4000까지의 숫자를 카운트할 배열
+        int[] count = new int[8001];  // -4000 ~ 4000까지의 숫자를 카운트할 배열
 
         // 숫자별로 등장하는 횟수를 count 배열에 저장
         for (int i = 0; i < N; i++) {
@@ -33,13 +33,13 @@ public class Main {
         }
 
         //빈도수를 저장하기 위해
-        int value[] = count.clone();  // count 배열의 복사본
+        int[] value = count.clone();  // count 배열의 복사본
         for (int i = 1; i < 8001; i++) {
             count[i] = count[i] + count[i - 1];
         }
 
         // CountingSort의 정렬 과정
-        int result[] = new int[N];
+        int[] result = new int[N];
         for (int i = N - 1; i >= 0; i--) {
             int temp = count[num[i] + 4000] - 1;
             result[temp] = num[i];

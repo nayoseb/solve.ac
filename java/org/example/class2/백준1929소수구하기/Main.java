@@ -16,14 +16,14 @@ public class Main {
 
         StringBuilder stringBuilder = new StringBuilder();
 
-        int[] arr = new int[N+1];
+        int[] arr = new int[N + 1];
 
         primeNumberSieve(N, arr, stringBuilder, M);
 
         System.out.println(stringBuilder);
     }
 
-    static void primeNumberSieve(int number,int[] arr, StringBuilder stringBuilder,int min) {
+    static void primeNumberSieve(int number, int[] arr, StringBuilder stringBuilder, int min) {
         for (int i = 2; i <= number; i++) {
             arr[i] = i;
         }

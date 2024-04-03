@@ -24,15 +24,14 @@ public class Main {
         System.out.println(result);
 
 
-
     }
 
     private static int search(int[] arr, int n, int m) {
         int result = 0;
-        for (int i = 0; i < n -2; i++) {
-            for (int j = i+1; j < n - 1; j++) {
-                for (int k = j+1; k < n; k++) {
-                    int temp = arr[i] + arr[j] +arr[k];
+        for (int i = 0; i < n - 2; i++) {
+            for (int j = i + 1; j < n - 1; j++) {
+                for (int k = j + 1; k < n; k++) {
+                    int temp = arr[i] + arr[j] + arr[k];
 
                     if (temp == m) {
                         return temp;

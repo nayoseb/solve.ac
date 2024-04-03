@@ -8,13 +8,13 @@ import java.util.StringTokenizer;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        BufferedReader  bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
 
         StringTokenizer stringTokenizer = new StringTokenizer(bufferedReader.readLine(), " ");
 
         StringBuilder stringBuilder = new StringBuilder();
 
-        HashMap<String,String> hashMap = new HashMap<>();
+        HashMap<String, String> hashMap = new HashMap<>();
 
 
         int N = Integer.parseInt(stringTokenizer.nextToken());
@@ -30,7 +30,7 @@ public class Main {
 
         for (int i = 0; i < M; i++) {
             String s = hashMap.get(bufferedReader.readLine());
-            stringBuilder.append(s+"\n");
+            stringBuilder.append(s + "\n");
         }
 
         System.out.println(stringBuilder);

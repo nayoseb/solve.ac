@@ -16,35 +16,35 @@ public class Main {
         int min = 256;
         int max = 0;
 
-        for(int i = 0; i < N; i++) {
+        for (int i = 0; i < N; i++) {
             st = new StringTokenizer(br.readLine());
-            for(int j = 0; j < M; j++) {
+            for (int j = 0; j < M; j++) {
                 arr[i][j] = Integer.parseInt(st.nextToken());
-                if(min > arr[i][j]) min = arr[i][j];
-                if(max < arr[i][j]) max = arr[i][j];
+                if (min > arr[i][j]) min = arr[i][j];
+                if (max < arr[i][j]) max = arr[i][j];
             }
         }
 
 
         int time = Integer.MAX_VALUE;
         int height = 0;
-        for(int i = min; i <= max; i++) {
+        for (int i = min; i <= max; i++) {
             int count = 0;
             int block = B;
-            for(int j = 0; j < N; j++) {
-                for(int k = 0; k < M; k++) {
-                    if(i < arr[j][k]) {
+            for (int j = 0; j < N; j++) {
+                for (int k = 0; k < M; k++) {
+                    if (i < arr[j][k]) {
                         count += ((arr[j][k] - i) * 2);
                         block += (arr[j][k] - i);
-                    }else {
+                    } else {
                         count += (i - arr[j][k]);
                         block -= (i - arr[j][k]);
                     }
                 }
             }
-            if(block < 0) break;
+            if (block < 0) break;
 
-            if(time >= count) {
+            if (time >= count) {
                 time = count;
                 height = i;
             }

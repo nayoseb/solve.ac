@@ -12,22 +12,20 @@ public class Main {
         int result = 0;
 
         while (portion >= 0) {
-            if (N%5==0) {
+            if (N % 5 == 0) {
                 result = portion;
-                isOk=true;
+                isOk = true;
                 break;
-            } else if ((N - 5*portion)%3==0) {
-                result = portion + (N - 5*portion)/3;
-                isOk=true;
+            } else if ((N - 5 * portion) % 3 == 0) {
+                result = portion + (N - 5 * portion) / 3;
+                isOk = true;
                 break;
             } else
                 portion--;
         }
-        if (isOk==true) {
+        if (isOk) {
             System.out.println(result);
         } else System.out.println("-1");
-
-
 
 
     }

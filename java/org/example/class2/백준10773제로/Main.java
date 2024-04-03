@@ -12,7 +12,6 @@ public class Main {
         Stack<Integer> stack = new Stack<>();
 
 
-
         for (int i = 0; i < K; i++) {
             int num = scanner.nextInt();
             if (num == 0) {
@@ -22,7 +21,7 @@ public class Main {
         }
 
         while (!stack.empty()) {
-            result+=stack.pop();
+            result += stack.pop();
         }
 
         System.out.println(result);

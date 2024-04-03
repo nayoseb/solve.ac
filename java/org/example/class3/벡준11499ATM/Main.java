@@ -25,9 +25,9 @@ public class Main {
 
         list.sort(Comparator.reverseOrder());
 
-        int result=0;
-        for (int i = N ; i >= 1  ; i--) {
-            result+= i* list.get(i-1);
+        int result = 0;
+        for (int i = N; i >= 1; i--) {
+            result += i * list.get(i - 1);
         }
 
 

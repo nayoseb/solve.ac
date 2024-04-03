@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.StringTokenizer;
 
 public class Main {
-    public static void main(String args[]) throws IOException {
+    public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
 
@@ -36,7 +36,7 @@ public class Main {
             sb.append("\n");
         }
 
-        System.out.println(sb.toString());
+        System.out.println(sb);
     }
 
     // 이 문자열이 숫자인지 아닌지 판단하는 함수

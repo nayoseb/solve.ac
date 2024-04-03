@@ -30,7 +30,7 @@ public class Main {
                 K -= arr[i];
                 count++;
             }
-            if (K==0)
+            if (K == 0)
                 break;
         }
 

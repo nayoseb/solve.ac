@@ -64,8 +64,8 @@ public class Main {
 
         for (int i = 0; i < N; i++) {
             StringTokenizer stringTokenizer = new StringTokenizer(bufferedReader.readLine(), " ");
-            arr[i][0] = stringTokenizer.nextToken();	// 나이
-            arr[i][1] = stringTokenizer.nextToken();	// 이름
+            arr[i][0] = stringTokenizer.nextToken();    // 나이
+            arr[i][1] = stringTokenizer.nextToken();    // 이름
 
         }
 
@@ -82,7 +82,7 @@ public class Main {
             stringBuilder.append(arr[i][0] + " " + arr[i][1] + "\n");
         }
 
-        System.out.println(stringBuilder.deleteCharAt(stringBuilder.length()-1));
+        System.out.println(stringBuilder.deleteCharAt(stringBuilder.length() - 1));
     }
 
 

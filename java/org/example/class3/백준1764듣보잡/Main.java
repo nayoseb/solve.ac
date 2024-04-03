@@ -3,12 +3,7 @@ package class3.백준1764듣보잡;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.StringTokenizer;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) throws IOException {
@@ -23,7 +18,7 @@ public class Main {
         }
         for (int i = 0; i < m; i++) {
             String name = br.readLine();
-            map.put(name, map.getOrDefault(name,0) +  1);
+            map.put(name, map.getOrDefault(name, 0) + 1);
             if (map.get(name) == 2) list.add(name);
         }
         StringBuilder sb = new StringBuilder();

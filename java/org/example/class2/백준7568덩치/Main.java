@@ -33,11 +33,11 @@ public class Main {
 
         StringBuilder stringBuilder = new StringBuilder();
 
-        for (int i = 0; i < N-1; i++) {
+        for (int i = 0; i < N - 1; i++) {
             stringBuilder.append(result[i]);
             stringBuilder.append(" ");
         }
-        stringBuilder.append(result[N-1]);
+        stringBuilder.append(result[N - 1]);
 
         System.out.println(stringBuilder);
 

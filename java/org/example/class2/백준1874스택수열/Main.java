@@ -25,9 +25,7 @@ public class Main {
                     sb.append('+').append('\n');
                 }
                 start = value;
-            }
-
-            else if (stack.peek() != value) {
+            } else if (stack.peek() != value) {
                 System.out.println("NO");
                 return;
             }

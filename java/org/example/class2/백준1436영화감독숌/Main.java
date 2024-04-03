@@ -12,7 +12,7 @@ public class Main {
 
         int N = Integer.parseInt(bufferedReader.readLine());
 
-        while (num!=N) {
+        while (num != N) {
             result++;
             if (String.valueOf(result).contains("666")) {
                 num++;

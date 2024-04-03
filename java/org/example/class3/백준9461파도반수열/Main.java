@@ -18,13 +18,13 @@ public class Main {
         int T = Integer.parseInt(bufferedReader.readLine());
 
         for (int i = 4; i < 101; i++) {
-            dp[i] = dp[i-3]+dp[i-2];
+            dp[i] = dp[i - 3] + dp[i - 2];
         }
 
         for (int i = 0; i < T; i++) {
-            stringBuilder.append(dp[Integer.parseInt(bufferedReader.readLine())]+"\n");
+            stringBuilder.append(dp[Integer.parseInt(bufferedReader.readLine())] + "\n");
         }
-        System.out.println(stringBuilder.deleteCharAt(stringBuilder.length()-1));
+        System.out.println(stringBuilder.deleteCharAt(stringBuilder.length() - 1));
 
 
     }

@@ -8,9 +8,9 @@ public class Main {
         int a = scanner.nextInt();
         int sum = 1;
         int count = 0;
-        while(a > (sum+=6*count)) {
+        while (a > (sum += 6 * count)) {
             count++;
         }
-        System.out.println(count+1);
+        System.out.println(count + 1);
     }
 }

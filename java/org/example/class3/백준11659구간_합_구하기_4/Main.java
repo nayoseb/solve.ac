@@ -15,8 +15,8 @@ public class Main {
 
 
         StringTokenizer stringTokenizer1 = new StringTokenizer(bufferedReader.readLine());
-        int[] arr = new int[N+1];
-        for (int i = 1; i < N+1; i++) {
+        int[] arr = new int[N + 1];
+        for (int i = 1; i < N + 1; i++) {
             arr[i] = Integer.parseInt(stringTokenizer1.nextToken());
         }
 
@@ -25,9 +25,8 @@ public class Main {
         dp[1] = arr[1];
 
 
-
-        for (int i = 2; i < N+1; i++) {
-            dp[i] = dp[i-1] + arr[i];
+        for (int i = 2; i < N + 1; i++) {
+            dp[i] = dp[i - 1] + arr[i];
         }
 
 
@@ -36,7 +35,7 @@ public class Main {
             int start = Integer.parseInt(stringTokenizer2.nextToken());
             int end = Integer.parseInt(stringTokenizer2.nextToken());
 
-            stringBuilder.append(dp[end]-dp[start-1] + "\n");
+            stringBuilder.append(dp[end] - dp[start - 1] + "\n");
         }
         System.out.println(stringBuilder);
 

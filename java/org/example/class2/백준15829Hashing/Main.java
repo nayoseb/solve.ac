@@ -13,8 +13,7 @@ public class Main {
         long sum = 0;
         long pow = 1;
         char[] arr = str_L.toCharArray();
-        for(int i = 0; i < L; i++)
-        {
+        for (int i = 0; i < L; i++) {
             sum += (arr[i] - 'a' + 1) * pow % M; //분배법칙
             pow = pow * 31 % M; //분배법칙
         }

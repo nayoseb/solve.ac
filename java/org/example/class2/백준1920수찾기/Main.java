@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class  Main {
+public class Main {
     public static void main(String[] args) throws IOException {
 
 
@@ -20,7 +20,6 @@ public class  Main {
         for (int i = 0; i < N; i++) {
             arr[i] = Integer.parseInt(stringTokenizer1.nextToken());
         }
-
 
 
         int M = Integer.parseInt(bufferedReader.readLine());
@@ -38,18 +37,18 @@ public class  Main {
         for (int i = 0; i < M; i++) {
             boolean isExist = false;
             for (int j = 0; j < N; j++) {
-                if (arr1[i]==arr[j]) {
-                    stringBuilder.append("1"+"\n");
+                if (arr1[i] == arr[j]) {
+                    stringBuilder.append("1" + "\n");
                     isExist = true;
                     break;
                 }
 
             }
             if (!isExist) {
-                stringBuilder.append("0"+"\n");
+                stringBuilder.append("0" + "\n");
             }
         }
-        stringBuilder.deleteCharAt(stringBuilder.length()-1);
+        stringBuilder.deleteCharAt(stringBuilder.length() - 1);
 
         System.out.println(stringBuilder);
 
