@@ -7,7 +7,8 @@ import java.util.StringTokenizer;
 
 public class Main {
 
-        static int count = 0;
+    static int count = 0;
+
     public static void main(String[] args) throws IOException {
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer stringTokenizer = new StringTokenizer(bufferedReader.readLine());
