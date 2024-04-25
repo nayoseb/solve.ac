@@ -1,4 +1,4 @@
-package class3.벡준1931회의실배정;
+package class3.백준1931회의실배정;
 
 import java.io.BufferedReader;
 import java.io.IOException;
